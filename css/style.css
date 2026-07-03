@@ -218,6 +218,21 @@ p { margin: 0; }
 .hero-trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.82); }
 .hero-trust-item svg { width: 20px; height: 20px; color: var(--gold-light); flex-shrink: 0; }
 
+/* Hero visual: large image with floating response card overlay */
+.hero-visual { position: relative; }
+.hero-image-wrap {
+  border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5; border: 1px solid rgba(255,255,255,0.14);
+}
+.hero-image {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  animation: heroImageIn 1s .2s cubic-bezier(.2,.8,.2,1) both;
+}
+.hero-floating-card.response-card {
+  position: absolute; left: -28px; bottom: -34px; width: min(300px, 78%); z-index: 3;
+  background: rgba(11,31,58,0.72);
+}
+
 /* Signature element: live response radar */
 .response-card {
   position: relative; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14);

@@ -63,8 +63,13 @@ Every image slot on the site already points to a `.jpg` filename under `/images/
 
 A full slot-by-slot list of filenames with suggested search terms for free stock photo sites is in `image-shopping-list.md` (provided alongside this project).
 
+**Where the two hero images specifically render:**
+- `images/hero/hero-plumber.jpg` — the large image on the right side of the **homepage hero** (`index.html`), with the "22 min avg. response" radar card floating over its bottom-left corner. It's also reused as the Open Graph / social-share preview image. Since the container crops to a tall 4:5 ratio on desktop (shifting to wider ratios on tablet/mobile), pick a vertical or centered shot — see `image-shopping-list.md` for exact minimum dimensions.
+- `images/hero/hero-plumber-2.jpg` — the photo in the **About page's** "Our Story" section (`about.html`), next to the founding-story copy. This one crops to a 4:3 landscape box.
+
 Recommended sizes:
-- Hero images: 1600×1000px
+- Hero image (homepage, `hero-plumber.jpg`): portrait-leaning, minimum ~1400×1750px
+- Hero image (About page, `hero-plumber-2.jpg`): landscape, minimum ~1600×1200px
 - Service card images: 800×600px
 - Gallery images: 700×700px or 700×900px
 - Team photos: 500×500px (square)

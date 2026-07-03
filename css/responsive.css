@@ -20,7 +20,12 @@
   .header-actions .btn-navy, .header-actions .btn-whatsapp { display: none; }
   .nav-toggle { display: flex; }
   .hero-grid { grid-template-columns: 1fr; }
-  .response-card { max-width: 420px; margin-inline: auto; }
+  .hero-visual { margin-top: 12px; }
+  .hero-image-wrap { aspect-ratio: 16 / 10; }
+  .hero-floating-card.response-card {
+    position: static; left: auto; bottom: auto;
+    width: min(420px, 94%); margin: -56px auto 0;
+  }
   .areas-map-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
@@ -40,6 +45,8 @@
   .coverage-list { columns: 1; }
   .hero-cta-row .btn, .cta-banner .hero-cta-row .btn { width: 100%; }
   .hero-cta-row, .cta-banner .hero-cta-row { flex-direction: column; }
+  .hero-image-wrap { aspect-ratio: 4 / 3; }
+  .hero-floating-card.response-card { margin-top: -40px; padding: 22px; }
   .trust-strip .container { justify-content: center; text-align: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
