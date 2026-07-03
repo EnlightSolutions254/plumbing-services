@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Plumbing Services",
+  "image": "https://www.plumbingservicesnairobi.co.ke/images/hero/hero-plumber.jpg",
+  "url": "https://www.plumbingservicesnairobi.co.ke/",
+  "telephone": "+254793016084",
+  "email": "sisuthelegend@gmail.com",
+  "priceRange": "KSh",
+  "description": "Premium 24-hour plumbing company serving Nairobi, Kenya — emergency plumbing, leak detection, installations, renovations and commercial plumbing services.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jumuiah Place",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -1.286389,
+    "longitude": 36.817223
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "areaServed": [
+    "Nairobi", "Kilimani", "Lavington", "Westlands", "Karen",
+    "Upper Hill", "Kileleshwa", "South B", "South C", "Langata",
+    "Parklands", "Runda", "Muthaiga", "Nairobi CBD", "Embakasi",
+    "Ridgeways", "Kasarani"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/",
+    "https://www.instagram.com/",
+    "https://twitter.com/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "186",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Plumbing Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Plumbing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leak Detection" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pipe Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pipe Repairs" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drain Cleaning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Renovation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Plumbing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Tank Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pump Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Plumbing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Plumbing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Heater Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Toilet Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tap Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Blocked Drains" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Blocked Sinks" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Material Supply" } }
+    ]
+  }
+}

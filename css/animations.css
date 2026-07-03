@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Animations — fade/slide reveals, counters, hero entrance
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+}
+[data-reveal].is-revealed { opacity: 1; transform: translateY(0); }
+[data-reveal="fade"] { transform: none; }
+[data-reveal="left"] { transform: translateX(-32px); }
+[data-reveal="left"].is-revealed { transform: translateX(0); }
+[data-reveal="right"] { transform: translateX(32px); }
+[data-reveal="right"].is-revealed { transform: translateX(0); }
+[data-reveal="scale"] { transform: scale(0.94); }
+[data-reveal="scale"].is-revealed { transform: scale(1); }
+
+[data-reveal-group] > * { transition-delay: calc(var(--i, 0) * 90ms); }
+
+/* Hero load-in sequence */
+.hero-copy .eyebrow { animation: heroUp .7s .05s cubic-bezier(.2,.8,.2,1) both; }
+.hero-copy h1 { animation: heroUp .8s .15s cubic-bezier(.2,.8,.2,1) both; }
+.hero-copy .lede { animation: heroUp .8s .28s cubic-bezier(.2,.8,.2,1) both; }
+.hero-cta-row { animation: heroUp .8s .4s cubic-bezier(.2,.8,.2,1) both; }
+.hero-trust { animation: heroUp .8s .52s cubic-bezier(.2,.8,.2,1) both; }
+.response-card { animation: heroScale .9s .3s cubic-bezier(.2,.8,.2,1) both; }
+
+@keyframes heroUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heroScale { from { opacity: 0; transform: translateY(20px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Marquee-like trust strip micro entrance */
+.trust-strip-item { animation: fadeIn .6s ease both; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Card hover lift already in style.css; add subtle icon float */
+.service-icon { transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+.service-card:hover .service-icon { transform: translateY(-4px) rotate(-4deg); }
+
+/* Button ripple-less press feedback */
+.btn:active { transform: scale(0.97); }
+
+/* Loading state for form */
+.btn.is-loading { pointer-events: none; }
+.btn.is-loading .btn-label { opacity: 0.6; }
+.spinner {
+  width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.4); border-top-color: currentColor;
+  animation: spin .7s linear infinite; display: none;
+}
+.btn.is-loading .spinner { display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Skeleton shimmer (unused placeholder utility, available for future async content) */
+.shimmer {
+  background: linear-gradient(90deg, var(--gray-100) 25%, var(--gray-200) 37%, var(--gray-100) 63%);
+  background-size: 400% 100%; animation: shimmer 1.4s ease infinite;
+}
+@keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}

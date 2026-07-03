@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Responsive rules — Desktop → Laptop → Tablet → Mobile → Small mobile
+   ========================================================================== */
+
+/* Laptop */
+@media (max-width: 1180px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .achieve-grid { grid-template-columns: repeat(2, 1fr); }
+  .response-steps { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { columns: 3 200px; }
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .nav-main { display: none; }
+  .header-actions .btn-navy, .header-actions .btn-whatsapp { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .response-card { max-width: 420px; margin-inline: auto; }
+  .areas-map-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+  .service-detail { grid-template-columns: 1fr; }
+  .service-detail.reverse .service-detail-media { order: 0; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  :root { --header-h: 76px; }
+  .services-grid, .why-grid, .values-grid, .team-grid, .achieve-grid, .response-steps { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .radio-card-group { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .gallery-grid { columns: 2 160px; }
+  .coverage-list { columns: 1; }
+  .hero-cta-row .btn, .cta-banner .hero-cta-row .btn { width: 100%; }
+  .hero-cta-row, .cta-banner .hero-cta-row { flex-direction: column; }
+  .trust-strip .container { justify-content: center; text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+  .radio-card-group { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .gallery-grid { columns: 1; }
+  .response-figures { flex-direction: column; align-items: center; gap: 18px; }
+  .response-figures > div { text-align: center !important; }
+  .brand-text-sub { display: none; }
+}
