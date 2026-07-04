@@ -15,7 +15,7 @@
 }
 
 /* Tablet */
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .nav-main { display: none; }
   .header-actions .btn-navy, .header-actions .btn-whatsapp { display: none; }
   .nav-toggle { display: flex; }
@@ -31,12 +31,13 @@
   .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
   .service-detail { grid-template-columns: 1fr; }
   .service-detail.reverse .service-detail-media { order: 0; }
+  .about-story-grid { grid-template-columns: 1fr; }
 }
 
 /* Mobile */
 @media (max-width: 720px) {
   :root { --header-h: 76px; }
-  .services-grid, .why-grid, .values-grid, .team-grid, .achieve-grid, .response-steps { grid-template-columns: 1fr; }
+  .services-grid, .why-grid, .values-grid, .team-grid, .achieve-grid, .response-steps, .about-mission-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .form-row { grid-template-columns: 1fr; }
   .radio-card-group { grid-template-columns: repeat(2, 1fr); }

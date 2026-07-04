@@ -132,3 +132,8 @@
 @media (max-width: 900px) {
   .hero-badge-chip { display: none; } /* avoid overlap clutter on small screens */
 }
+
+@media (max-width: 720px) {
+  [data-reveal="left"], [data-reveal="right"] { transform: translateY(28px); }
+  [data-reveal="left"].is-revealed, [data-reveal="right"].is-revealed { transform: translateY(0); }
+}
