@@ -30,6 +30,63 @@
 @keyframes heroScale { from { opacity: 0; transform: translateY(20px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes heroImageIn { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
 
+/* ==========================================================================
+   HERO SLIDESHOWS — Ken Burns (slow zoom) + side drift + crossfade
+   Each image gets a quarter of the loop: fade in -> drift/zoom -> fade out -> hold
+   ========================================================================== */
+
+/* Framed hero image box (sharp, 4 images) */
+@keyframes heroKenBurns {
+  0%   { opacity: 0; transform: scale(1) translateX(0); }
+  2%   { opacity: 1; transform: scale(1) translateX(0); }
+  25%  { opacity: 1; transform: scale(1.14) translateX(-2.5%); }
+  28%  { opacity: 0; transform: scale(1.14) translateX(-2.5%); }
+  100% { opacity: 0; transform: scale(1.14) translateX(-2.5%); }
+}
+
+/* Ambient full-bleed background slideshow (blurred, larger drift for depth) */
+@keyframes heroBgKenBurns {
+  0%   { opacity: 0; transform: scale(1) translateX(2%); }
+  3%   { opacity: 0.65; transform: scale(1) translateX(2%); }
+  25%  { opacity: 0.65; transform: scale(1.08) translateX(-2%); }
+  28%  { opacity: 0; transform: scale(1.08) translateX(-2%); }
+  100% { opacity: 0; transform: scale(1.08) translateX(-2%); }
+}
+
+/* Floating decorative gradient orbs */
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-16px, 22px) scale(1.08); }
+}
+
+/* Glass sheen sweeping diagonally across the framed hero image */
+@keyframes sheenSweep {
+  0% { background-position: -40% -40%; opacity: 0; }
+  10% { opacity: 1; }
+  45% { opacity: 1; }
+  60% { background-position: 140% 140%; opacity: 0; }
+  100% { background-position: 140% 140%; opacity: 0; }
+}
+
+/* Small dots marking active slide position */
+@keyframes dotPulse {
+  0%, 2% { background: rgba(255,255,255,0.35); width: 6px; }
+  4%, 23% { background: var(--gold-light); width: 18px; }
+  26%, 100% { background: rgba(255,255,255,0.35); width: 6px; }
+}
+
+/* Gentle float for the floating guarantee badge chip */
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Scroll cue arrow bounce */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
 /* Marquee-like trust strip micro entrance */
 .trust-strip-item { animation: fadeIn .6s ease both; }
 
@@ -67,4 +124,11 @@
     scroll-behavior: auto !important;
   }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .hero-slide, .hero-bg-slide { opacity: 1 !important; transform: none !important; }
+  .hero-slide:not(:first-child), .hero-bg-slide:not(:first-child) { display: none; }
+  .hero-image-sheen, .hero-orb, .hero-badge-chip, .hero-scroll-cue svg { display: none; }
+}
+
+@media (max-width: 900px) {
+  .hero-badge-chip { display: none; } /* avoid overlap clutter on small screens */
 }
