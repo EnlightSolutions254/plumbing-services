@@ -3,9 +3,9 @@
    Reads data-active from <body> to mark the current nav item.
    ========================================================================== */
 (function () {
-  const PHONE = "0793016084";
-  const PHONE_ALT = "0731981336";
-  const WHATSAPP = "254793016084"; // international format for wa.me
+  const PHONE = "0111333599";
+  const PHONE_ALT = "0111333599";
+  const WHATSAPP = "0111333599"; // international format for wa.me
   const EMAIL = "sisuthelegend@gmail.com";
 
   const NAV_ITEMS = [
